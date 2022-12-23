@@ -1,0 +1,144 @@
+html,body{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    padding:0;
+    background:#f6f8fa;
+}  
+.PC{
+    display:none;
+}
+.MP{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tbl{
+    height:55px;
+    width:70px;
+    background:#fff;
+}
+.b1d9f4{
+    background:#dbf0ff;
+}               
+.tbl:hover{
+    background:#b1d9f4;
+}  
+.toubulan{
+    width:100%;
+    height:55px;
+    background:#fff;
+    box-shadow: 0px 10px 5px #a5abb1;
+    position: fixed;
+    top: 0px;
+}   
+.datiban{
+    border-radius:50px;
+    position:absolute;
+    height:450px;
+    width:300px;
+    background:#f0f0f0;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    margin:auto; 
+    display:none;
+}
+.guanbi{
+    width:45px;
+    height:45px;
+    position:absolute;
+    background:url('.././图像资源/关闭.png');
+    background-size: cover;
+} 
+.juzhong{
+    width:75%;
+    height:75%;
+    margin:0 auto;
+    background:#fff;
+    box-shadow: 0px 10px 10px #a5abb1;
+    padding: 60px 60px 60px 70px;
+}
+.weikaifang:hover{
+    background:#29323a;
+    color:#dfdfdf;
+}
+.hr{
+    width:100%;
+    height:3px;
+    background:#20216f;
+    margin: 13px 0px 0px 0px;
+}
+.huifu{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    position: fixed;
+    bottom:20px;
+    left:20px;
+    background:#959595;
+}
+.fanhui{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    position: fixed;
+    bottom:95px;
+    left:20px;
+    background:#959595;
+}
+.ziweizhi{
+    text-align:center;
+    line-height:30px;
+}
+.shipin{
+    width:100%;
+    height:38px;
+    background:#b8ecff;
+}
+.tuijian{
+    width:100%;
+    height:250px;
+    background:#fafafa;
+    overflow:auto;
+    transition: height 0.4s;
+}
+.shipinming{
+    width:220px;
+    height:46px;
+    overflow-x: scroll;
+} 
+.shipinzhankuang{
+    width:220px;
+    float:left; 
+    margin:5px 5px 5px 5px;
+    border: 2px solid #5e5e5e;
+}
+.tuijian-img{
+    width:100%;
+    height:140px;
+}
+.daojishiwaikuang{
+    width:273px;
+    height:273px;
+    border: 35px solid green;
+    border-radius:50%;
+}
+a{
+    text-decoration:none;
+    color:black;
+} 
+.p-1{
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 0px;
+}
+.p-2{
+    font-weight: lighter;
+    color:#5e5e5e;
+    text-align: right;
+    line-height: 5px;
+}
