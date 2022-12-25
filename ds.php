@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>屑网站</title>
+    <title>bhkiu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript">
