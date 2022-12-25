@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>屑网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
-    <link rel="stylesheet" type="text/css" href="./css/index-MP.css" media="screen and (max-width:550px)"/>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript">
         var userAgent = window.navigator.userAgent;
