@@ -28,7 +28,7 @@ html,body{
 }
 .tbl{
     height:60px;
-    width:100px;
+    width:88px;
     background:#fff;
 }
 .b1d9f4{
@@ -66,24 +66,18 @@ html,body{
     background-size: cover;
 } 
 .juzhong{
-    width:75%;
+    width:80%;
     height:75%;
     margin:0 auto;
     background:#fff;
     box-shadow: 0px 10px 10px #a5abb1;
-    padding: 60px 60px 60px 70px;
+    padding: 35px 50px 50px 35px;
 }
 .weikaifang:hover{
     background:#29323a;
     color:#dfdfdf;
 }
-.hr{
-    width:100%;
-    height:3px;
-    background:#20216f;
-    margin: 13px 0px 0px 0px;
-}
-.huifu{
+.fanhui{
     width:55px;
     height:55px;
     border-radius:50%;
@@ -92,45 +86,24 @@ html,body{
     left:20px;
     background:#959595;
 }
-.fanhui{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    position: fixed;
-    bottom:95px;
-    left:20px;
-    background:#959595;
-}
 .ziweizhi{
     text-align:center;
-    line-height:30px;
+    line-height:24px;
 }
-.shipin{
-    width:100%;
-    height:38px;
-    background:#b8ecff;
-}
-.tuijian{
-    width:100%;
-    height:250px;
-    background:#fafafa;
+.shipinxinxi{
+    width:50%;
+    height:145px;
     overflow:auto;
-    transition: height 0.4s;
-}
-.shipinming{
-    width:220px;
-    height:46px;
-    overflow-x: scroll;
 } 
 .shipinzhankuang{
-    width:220px;
-    float:left; 
+    width:97.5%;
     margin:5px 5px 5px 5px;
     border: 2px solid #5e5e5e;
 }
 .tuijian-img{
-    width:100%;
-    height:140px;
+    width:50%;
+    height:145px;
+    float:left;
 }
 .daojishiwaikuang{
     width:273px;
@@ -144,13 +117,58 @@ a{
 } 
 .p-1{
     font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 0px;
+    text-align: left;
 }
 .p-2{
     font-weight: lighter;
     color:#5e5e5e;
     text-align: right;
-    line-height: 5px;
+}
+.sousuokuang{
+    width:140px;
+    height:54px;
+    transition:width 1s;
+}
+.sousuokuang:focus{
+    width:330px;
+}
+.boketi{
+     width:99.8%;
+     height:35px;
+     background:#fff;
+     box-shadow: 1px 4px 4px #a5abb1;
+}
+.boke{
+}
+.shipin{
+    width:100%;
+    height:53%;
+    float:left;
+    overflow:auto;
+    box-shadow: 1px 6px 6px #a5abb1;
+}
+.zuo{
+    width:49.9%;
+    height:100%;
+    float:left;
+}
+.zhong{
+    width:0.1%;
+    height:100%;
+    background:#363636;
+    float:left;
+}
+.mokuai3{
+    width:100%;
+    height:47%;
+    overflow:auto;
+    box-shadow: 1px 6px 6px #a5abb1;
+}
+.you{
+    width:49.9%;
+    height:100%;
+    float:right;
+}
+::-webkit-scrollbar {
+    width:0px;
 }
