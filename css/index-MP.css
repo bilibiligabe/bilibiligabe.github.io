@@ -33,52 +33,23 @@ html,body{
     position: fixed;
     top: 0px;
 }   
-.datiban{
-    border-radius:50px;
-    position:absolute;
-    height:450px;
-    width:300px;
-    background:#f0f0f0;
-    top:0px;
-    left:0px;
-    bottom:0px;
-    right:0px;
-    margin:auto; 
-    display:none;
-}
 .guanbi{
     width:45px;
     height:45px;
-    position:absolute;
+    display:none;
+    float:right;
     background:url('.././图像资源/关闭.png');
     background-size: cover;
 } 
-.juzhong{
-    width:75%;
-    height:75%;
-    margin:0 auto;
+.neirong{
+    width:100%;
     background:#fff;
-    box-shadow: 0px 10px 10px #a5abb1;
-    padding: 60px 60px 60px 70px;
+    padding: 12px 7px 12px 7px;
+    height:100%;
 }
 .weikaifang:hover{
     background:#29323a;
     color:#dfdfdf;
-}
-.hr{
-    width:100%;
-    height:3px;
-    background:#20216f;
-    margin: 13px 0px 0px 0px;
-}
-.huifu{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    position: fixed;
-    bottom:20px;
-    left:20px;
-    background:#959595;
 }
 .fanhui{
     width:55px;
@@ -87,11 +58,16 @@ html,body{
     position: fixed;
     bottom:95px;
     left:20px;
-    background:#959595;
+    background:#6dade77d;
 }
-.ziweizhi{
-    text-align:center;
-    line-height:30px;
+.caidan{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    position: fixed;
+    bottom:25px;
+    left:20px;
+    background:#6dade77d;
 }
 .shipin{
     width:100%;
@@ -120,11 +96,14 @@ html,body{
     width:100%;
     height:140px;
 }
-.daojishiwaikuang{
-    width:273px;
-    height:273px;
-    border: 35px solid green;
-    border-radius:50%;
+.dibulan{
+    width:96%;
+    height:0px;
+    background:#ededed;
+    position: fixed;
+    bottom:25px;
+    left:2%;
+    transition:height 0.4s;
 }
 a{
     text-decoration:none;
@@ -141,4 +120,15 @@ a{
     color:#5e5e5e;
     text-align: right;
     line-height: 5px;
+}
+.sousuokuang{
+    width:90px;
+    height:50px;
+    transition:width 0.8s;
+}
+.sousuokuang:focus{
+    width:135px;
+}
+::-webkit-scrollbar {
+    width:0px;
 }
