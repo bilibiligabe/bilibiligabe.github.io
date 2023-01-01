@@ -45,9 +45,7 @@
         <div style="height:68px;width:100%;margin:5px; "></div>
         <div class="juzhong">
             <div class="zuo">
-                <div class="boketi"><p style="text-align:center;line-height:35px;">博客推荐</p><?php
-echo "test ";
-?></div>
+                <div class="boketi"><p style="text-align:center;line-height:35px;">博客推荐</p></div>
                 <div class="boke"><p style="color:#5e5e5e;text-align:center;">还没有内容哦</p></div>                                               
             </div>
             <div class="zhong"></div>
@@ -79,12 +77,16 @@ echo "test ";
                         </a>
                     </div>
                 </div>
+                <div class="mokuai3">
+                    <p id="time" align="center"></p>
+                </div>
             </div>
         </div>
     </div>
                 
     <div class="MP">
-        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p class="ziweizhi">顶部</p></div>
+        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p style="text-align:center;line-height:25px;">顶部</p></div>
+        <div onclick="caidan()" class="caidan" title="查看更多"><p style="text-align:center;line-height:25px;">菜单</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
             <div style="float:left;" class="tbl b1d9f4">
@@ -102,8 +104,9 @@ echo "test ";
             </div>
         </div>
         <div style="height:50px;width:100%;margin:5px; "></div>
-        <div class="juzhong">
+        <div class="neirong">
         </div>
+        <div class="dibulan" id="caidan"><div class="guanbi" onclick="caidan()" id="caidan-guanbi"></div></div>
     </div>           
 </body>
 </html>
