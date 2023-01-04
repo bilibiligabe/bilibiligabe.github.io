@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>屑网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
@@ -16,13 +16,13 @@
     <div class="PC">
         <!-- 页面正常弹窗 -->
         <div class="tanchuang" id="tanchuang">
-            <h2>如果你是电脑端，页面出现错位 无法正常浏览，可以按住 Ctrl 键  滚动鼠标中键 调整缩放至正常页面哦</h2>
+            <p style="font-size:23px;color:#ededed;">·如果页面出现错位 影响浏览，可按住 Ctrl 键 滚动鼠标中键 调整缩放至正常页面<br/>·推荐全屏浏览哦</p>
             <h3 id="djs" style="position:absolute;bottom:10px;right:20px;z-index:2;"></h3>
         </div>
         <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p class="ziweizhi">顶部</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
-            <div style="float:left;" class="tbl b1d9f4">
+            <div style="float:left;" class="tbl b1d9f4" onmouseover="dncdzk()" onmouseout="dncdgb()">
                 <a href="./index.html"><h3 style="line-height:0px;text-align:center;">首页</h3><p style="line-height:10px;text-align:center;">Home</p></a>
             </div>
             <div style="float:left;" class="tbl">
@@ -35,14 +35,15 @@
                 <h3 style="line-height:0px;text-align:center;">数学</h3><p style="line-height:10px;text-align:center;">Math</p>
             </div>
             <div style="float:left;">
-                <input class="sousuokuang"></input>
+                <input class="sousuokuang">
                 <div style="float:right;border: 1px solid #5e5e5e;height:58px;border-radius:3px;" class="tbl" onclick="alert('搜个屁，没弄好')"><h3 style="line-height:0px;text-align:center;">搜索</h3><p style="line-height:10px;text-align:center;">Search</p></div>
             </div>
             <div style="float:right" class="tbl weikaifang">
-                <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blogger</p>
+                <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blog</p>
             </div>
         </div>
         <div style="height:68px;width:100%;margin:5px; "></div>
+        <div id="dncd"></div>
         <div class="juzhong">
             <div class="zuo">
                 <div class="boketi"><p style="text-align:center;line-height:35px;">博客推荐</p></div>
@@ -50,35 +51,34 @@
             </div>
             <div class="zhong"></div>
             <div class="you">
-                <!-- 视频推荐 -->
                 <div class="shipin">
                     <div class="shipinzhankuang">
                         <a href="https://www.bilibili.com/video/BV1Tg411W7LS?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                            <img src="./图像资源/1.webp" class="tuijian-img"/>
+                            <img src="./图像资源/1.webp" class="tuijian-img" alt="图片丢失"/>
                             <div class="shipinxinxi"><p class="p-1">《倒霉动物在哪里》</p><p class="p-2">作者:龙馍馍</p></div>
                         </a>
                     </div>
                     <div class="shipinzhankuang">
                         <a href="https://www.bilibili.com/video/BV1Zv4y1m7k8?spm_id_from=333.1007.tianma.3-3-7.click" target="_blank" >
-                            <img src="./图像资源/2.webp" class="tuijian-img"/>
+                            <img src="./图像资源/2.webp" class="tuijian-img" alt="图片丢失"/>
                             <div class="shipinxinxi"><p class="p-1">蓝色妖姬毁灭鬼畜区</p><p class="p-2">作者:青铃荼阳</p></div>
                         </a>
                     </div>
                     <div class="shipinzhankuang">
                         <a href="https://www.bilibili.com/video/BV13Y411f7zr?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                            <img src="./图像资源/3.webp" class="tuijian-img"/>
+                            <img src="./图像资源/3.webp" class="tuijian-img" alt="图片丢失"/>
                             <div class="shipinxinxi"><p class="p-1">《动物迷惑行为大赏130》</p><p class="p-2">作者:龙馍馍</p></div>
                         </a>
                     </div>
                     <div class="shipinzhankuang">
                         <a href="https://www.bilibili.com/video/BV1Hd4y1k73B?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                            <img src="./图像资源/4.webp" class="tuijian-img"/>
+                            <img src="./图像资源/4.webp" class="tuijian-img" alt="图片丢失"/>
                             <div class="shipinxinxi"><p class="p-1">边吃头孢边喝酒，你的身体会发生哪些变化？</p><p class="p-2">作者:李白尼的猜想</p></div>
                         </a>
                     </div>
                 </div>
                 <div class="mokuai3">
-                    <p id="time" align="center"></p>
+                    <p align="center">2023/01/01/00:00:00建站</p><p id="time" align="center"></p><p align="center">站长:王康硕</p><h1 align="center">Welcome to Bilibiliganbei.netlify.app！</h1>
                 </div>
             </div>
         </div>
@@ -96,15 +96,45 @@
                 <a href="./英语.html"><p style="line-height:9px;text-align:center;">英语<br/><br/>English</p></a>
             </div>
             <div style="float:left;">
-                <input class="sousuokuang"></input>
+                <input class="sousuokuang">
                 <div style="float:right;border: 1px solid #5e5e5e;height:53px;border-radius:3px;" class="tbl"  onclick="alert('搜个屁，没弄好')"><p style="line-height:8px;text-align:center;">搜索<br/><br/>search</p></div>
             </div>
             <div style="float:right" class="tbl weikaifang">
-                <p style="line-height:9px;text-align:center;">博客<br/><br/>Blongger</p>
+                <p style="line-height:9px;text-align:center;">博客<br/><br/>Blog</p>
             </div>
         </div>
         <div style="height:50px;width:100%;margin:5px; "></div>
         <div class="neirong">
+            <div class="boke">
+                <div class="boketi"><br/><br/><p style="text-align:center;font-size:20px;">博客</p></div>
+                <div class="bokenr"><p align="center">No blogs</p></div>
+            </div>
+            <div class="shipin">
+                <div class="shipinzhankuang">
+                    <a href="https://www.bilibili.com/video/BV1Tg411W7LS?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
+                        <img src="./图像资源/1.webp" class="tuijian-img" alt="图片丢失"/>
+                        <div class="shipinxinxi"><p class="p-1">《倒霉动物在哪里》</p><p class="p-2">作者:龙馍馍</p></div>
+                    </a>
+                </div>
+                <div class="shipinzhankuang">
+                    <a href="https://www.bilibili.com/video/BV1Zv4y1m7k8?spm_id_from=333.1007.tianma.3-3-7.click" target="_blank" >
+                        <img src="./图像资源/2.webp" class="tuijian-img" alt="图片丢失"/>
+                        <div class="shipinxinxi"><p class="p-1">蓝色妖姬毁灭鬼畜区</p><p class="p-2">作者:青铃荼阳</p></div>
+                    </a>
+                </div>
+                <div class="shipinzhankuang">
+                    <a href="https://www.bilibili.com/video/BV13Y411f7zr?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
+                        <img src="./图像资源/3.webp" class="tuijian-img" alt="图片丢失"/>
+                        <div class="shipinxinxi"><p class="p-1">《动物迷惑行为大赏130》</p><p class="p-2">作者:龙馍馍</p></div>
+                    </a>
+                </div>
+                <div class="shipinzhankuang">
+                     <a href="https://www.bilibili.com/video/BV1Hd4y1k73B?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
+                         <img src="./图像资源/4.webp" class="tuijian-img" alt="图片丢失"/>
+                         <div class="shipinxinxi"><p class="p-1">边吃头孢边喝酒，你的身体会发生哪些变化？</p><p class="p-2">作者:李白尼的猜想</p></div>
+                     </a>
+                </div>
+            </div>
         </div>
         <div class="dibulan" id="caidan"><div class="guanbi" onclick="caidan()" id="caidan-guanbi"></div></div>
     </div>           

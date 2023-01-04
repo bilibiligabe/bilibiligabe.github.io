@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>屑网站</title>
+    <meta charset="UTF-8">
+    <title>屑网站-英语</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
     <link rel="stylesheet" type="text/css" href="./css/index-MP.css" media="screen and (max-width:550px)"/>
@@ -16,13 +16,13 @@
     <div class="PC">
         <!-- 页面正常弹窗 -->
         <div class="tanchuang" id="tanchuang">
-            <h2>如果你是电脑端，页面出现错位 无法正常浏览，可以按住 Ctrl 键  滚动鼠标中键 调整缩放至正常页面哦</h2>
+            <p style="font-size:23px;color:#ededed;">·如果页面出现错位 影响浏览，可按住 Ctrl 键 滚动鼠标中键 调整缩放至正常页面<br/>·推荐全屏浏览哦</p>
             <h3 id="djs" style="position:absolute;bottom:10px;right:20px;z-index:2;"></h3>
         </div>
         <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p class="ziweizhi">顶部</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
-            <div style="float:left;" class="tbl">
+            <div style="float:left;" class="tbl" onmouseover="dncdzk()" onmouseout="dncdgb()">
                 <a href="./index.html"><h3 style="line-height:0px;text-align:center;">首页</h3><p style="line-height:10px;text-align:center;">Home</p></a>
             </div>
             <div style="float:left;" class="tbl b1d9f4">
@@ -35,34 +35,36 @@
                 <h3 style="line-height:0px;text-align:center;">数学</h3><p style="line-height:10px;text-align:center;">Math</p>
             </div>
             <div style="float:left;">
-                <input class="sousuokuang"></input>
+                <input class="sousuokuang">
                 <div style="float:right;border: 1px solid #5e5e5e;height:58px;border-radius:3px;" class="tbl" onclick="alert('搜个屁，没弄好')"><h3 style="line-height:0px;text-align:center;">搜索</h3><p style="line-height:10px;text-align:center;">Search</p></div>
             </div>
             <div style="float:right" class="tbl weikaifang">
-                <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blogger</p>
+                <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blog</p>
             </div>
         </div>
         <div style="height:68px;width:100%;margin:5px; "></div>
+        <div id="dncd"></div>
         <div class="juzhong">
         </div>
-    </div>   
+    </div>
+                
     <div class="MP">
         <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p style="text-align:center;line-height:25px;">顶部</p></div>
         <div onclick="caidan()" class="caidan" title="查看更多"><p style="text-align:center;line-height:25px;">菜单</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
-            <div style="float:left;" class="tbl b1d9f4">
+            <div style="float:left;" class="tbl">
                 <a href="./index.html"><p style="line-height:9px;text-align:center;">首页<br/><br/>Home</p></a>
             </div>
-            <div style="float:left;" class="tbl">
+            <div style="float:left;" class="tbl b1d9f4">
                 <a href="./英语.html"><p style="line-height:9px;text-align:center;">英语<br/><br/>English</p></a>
             </div>
             <div style="float:left;">
-                <input class="sousuokuang"></input>
+                <input class="sousuokuang">
                 <div style="float:right;border: 1px solid #5e5e5e;height:53px;border-radius:3px;" class="tbl"  onclick="alert('搜个屁，没弄好')"><p style="line-height:8px;text-align:center;">搜索<br/><br/>search</p></div>
             </div>
             <div style="float:right" class="tbl weikaifang">
-                <p style="line-height:9px;text-align:center;">博客<br/><br/>Blongger</p>
+                <p style="line-height:9px;text-align:center;">博客<br/><br/>Blog</p>
             </div>
         </div>
         <div style="height:50px;width:100%;margin:5px; "></div>
