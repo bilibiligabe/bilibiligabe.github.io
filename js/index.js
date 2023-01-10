@@ -24,15 +24,17 @@ function guanbi(guanbi) {
     guanbi.style.display = "none";
 }
 //计算时间
-var nowtime = new Date;
-var time = nowtime.getTime();
-var time1 = time - 1672502400000; //TIME：2023/1/1/00:00:00
-var second = parseInt(time1 / 1000);
-var minute = second / 60;
-var hour = minute / 60;
-var day = parseInt(hour / 24);
-window.onload = function(){
-    document.getElementById("time").innerHTML="网站已运行："+day+"天";
+function time() {
+    var nowtime = new Date;
+    var time = nowtime.getTime();
+    var time1 = time - 1672502400000; //TIME：2023/1/1/00:00:00
+    var second = parseInt(time1 / 1000);
+    var minute = second / 60;
+    var hour = minute / 60;
+    var day = parseInt(hour / 24);
+    window.onload = function(){
+        document.getElementById("time").innerHTML="网站已运行："+day+"天";
+    }
 }
 //菜单1
 function dncdzk(){
