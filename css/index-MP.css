@@ -135,9 +135,6 @@ a{
     height:50px;
     transition:width 0.8s;
 }
-.sousuokuang:focus{
-    width:135px;
-}
 ::-webkit-scrollbar {
     width:0px;
 }
