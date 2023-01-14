@@ -58,7 +58,7 @@ html,body{
     position: fixed;
     bottom:95px;
     left:20px;
-    background:#6dade77d;
+    background:#88c4facc;
 }
 .caidan{
     width:55px;
@@ -67,7 +67,17 @@ html,body{
     position: fixed;
     bottom:25px;
     left:20px;
-    background:#6dade77d;
+    background:#88c4facc;
+}
+.cdnr{
+    width:48%;
+    height:45px;
+    float:left;
+    background:#fff;
+    margin:1%;
+}
+.cdnr:hover{
+    box-shadow: 0px 7px 7px 3px #d1d1d1;
 }
 .shipin{
     width:100%;
@@ -108,9 +118,10 @@ html,body{
 .dibulan{
     width:96%;
     height:0px;
-    background:#ededed;
+    display:none;
+    background:#3a3838cc;
     position: fixed;
-    bottom:25px;
+    bottom:15px;
     left:2%;
     transition:height 0.4s;
 }

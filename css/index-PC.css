@@ -50,15 +50,22 @@ html,body{
     background:#fff;
     box-shadow: 0px 10px 5px #a5abb1;
     height:0px;
-    position:absolute;
+    position: fixed;
     top:66px;
     left:1px;
     transition:height 0.6s;
     overflow:hidden;
 }
-.dncd:hover{
-    height:300px;
-}  
+.dncdnr{
+    height:80px;
+    width:110px;
+    background:#fff;
+    float:left;
+    margin:8px 8px 8px 8px;
+}
+.dncdnr:hover{
+    box-shadow: 0px 6px 6px 2px #a5abb1;
+}
 .guanbi{
     width:45px;
     height:45px;
@@ -102,7 +109,7 @@ html,body{
     border: 2px solid #5e5e5e;
 }
 .tuijian-img{
-    width:50%;
+    width:44%;
     height:145px;
     float:left;
 }
