@@ -3,15 +3,17 @@ var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
     setTimeout(function a () {
         var tanchuang = document.getElementById("tanchuang");tanchuang.style.height = tanchuang.offsetHeight===0 ? 230+'px' : 0+'px';
-        var djs = 10;var djsrq = document.getElementById("djs");
+        var djs = 7;var djsrq = document.getElementById("djs");
         djsrq.innerHTML= djs;
-        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 1000);setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 2000);
-        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 3000);setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 4000);
-        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 5000);setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 6000);
-        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 7000);setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 8000);
-        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 9000);setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 10000);
-        setTimeout(function b () {tanchuang.style.height = tanchuang.offsetHeight===0 ? 230+'px' : 0+'px';}, 10400);
-        setTimeout(function b () {tanchuang.style.display = "none";}, 10900);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 1000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 2000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 3000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 4000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 5000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 6000);
+        setTimeout(function b () {djs--;djsrq.innerHTML= djs;}, 7000);
+        setTimeout(function b () {tanchuang.style.height = tanchuang.offsetHeight===0 ? 230+'px' : 0+'px';}, 7500);
+        setTimeout(function b () {tanchuang.style.display = "none";}, 7900);
     }, 1000);
 }
 //返回顶部
@@ -39,7 +41,7 @@ function time() {
 //菜单1
 function dncdzk(){
     var dncd = document.getElementById("dncd");
-    dncd.style.height = 300+"px";
+    dncd.style.height = 300+'px';
 }
 function dncdgb(){
     var dncd = document.getElementById("dncd");
@@ -49,7 +51,8 @@ function dncdgb(){
 function caidan (){
     var caidan = document.getElementById("caidan");
     var height = caidan.offsetHeight;
-    if (height == 0){document.getElementById("caidan-guanbi").style.display="block";}
-    caidan.style.height = height===0 ? 350+'px' : 0+'px';
-    if (height == 350){document.getElementById("caidan-guanbi").style.display="none";}
+    if (height == 0){caidan.style.display="block";}
+    document.getElementById("caidan-guanbi").style.display="block";
+    setTimeout(function a () {caidan.style.height = height===0 ? 420+'px' : 0+'px';},100);
+    if (height == 420){setTimeout(function a () {caidan.style.display="none";}, 400);}
 }
