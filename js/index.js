@@ -90,5 +90,5 @@ function usernews (){
     //from
     document.getElementById("from").submit();
 }
-
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
 //登录
