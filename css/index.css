@@ -1,0 +1,36 @@
+#denglu{
+    width:100%;
+    height:100%;
+    background:#4a3e66f0;
+    display:none;
+    position:fixed;
+    z-index:2;
+}
+#denglu h1{
+    color:white;
+    text-align:center;
+}
+#denglu div{
+    text-align:center;
+}
+#denglu p{
+    color:white;
+    font-size:25px;
+}
+#denglu input{
+    width:110px;
+    height:35px;
+    font-size:23px;
+    margin:5px;
+}
+.sousuokuang:focus{
+    width:330px;
+}
+#tijiao{
+    margin:0 auto;
+    width:210px;
+    height:35px;
+    color:white;
+    font-size:23px;
+    background:#4caf50;
+}
