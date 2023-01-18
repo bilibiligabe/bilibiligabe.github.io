@@ -84,7 +84,7 @@ function usernews (){
         document.cookie = mail+ expires +"path=/";
         document.cookie = password + expires +"path=/";
         var cookie = document.cookie;
-        retrun cookie;
+        retrun;
     }
     
     //from
