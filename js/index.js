@@ -36,6 +36,7 @@ function time() {
     var day = parseInt(hour / 24);
     window.onload = function(){
         document.getElementById("time").innerHTML="网站已运行："+day+"天";
+        document.getElementById("time1").innerHTML="网站已运行："+day+"天";
     }
 }
 //菜单1
@@ -56,3 +57,38 @@ function caidan (){
     setTimeout(function a () {caidan.style.height = height===0 ? 420+'px' : 0+'px';},100);
     if (height == 420){setTimeout(function a () {caidan.style.display="none";}, 400);}
 }
+//登录
+function sign (){
+    document.getElementById("denglu").style.display = "block";
+    /*
+    var btn=document.createElement("button");
+    var t=document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    btn.id="a";
+    document.body.appendChild(btn);
+    */
+}
+//From and Cookie
+function usernews (){
+    //cookie
+    var cookie = document.cookie;
+    if(cookie !== ""){
+        alert("已登录/提交")
+        retrun;
+    } else{
+        var username = "user="+document.getElementById("username").value+";";
+        var mail = "mail="+document.getElementById("mail").value+";";
+        var password = "password="+document.getElementById("password").value+";";
+        var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
+        document.cookie = username + expires +"path=/";
+        document.cookie = mail+ expires +"path=/";
+        document.cookie = password + expires +"path=/";
+        var cookie = document.cookie;
+        retrun cookie;
+    }
+    
+    //from
+    document.getElementById("from").submit();
+}
+
+//登录
