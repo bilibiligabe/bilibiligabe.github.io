@@ -11,21 +11,6 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript">
-        var username = "user=;";
-        var mail = "mail=;";
-        var password = "password=;";
-        var expires ="expires=Thu, 01 Jan 1970 00:00:00 GMT;";
-        document.cookie = username + expires +"path=/";
-        document.cookie = mail+ expires +"path=/";
-        document.cookie = password + expires +"path=/";
-        var cookie = document.cookie;
-        if (cookie==""){
-            console.log("已删除");
-            var dlzt = 0;
-        }else{
-            console.log("删除失败");
-            var dlzt = 1;
-        }
         time();
         var userAgent = window.navigator.userAgent;
         if(userAgent === "Mozilla/5.0 (Linux; U; Android 10; zh-CN; Redmi K30 5G Build/QKQ1.191222.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/69.0.3497.100 UWS/3.22.1.233 Mobile Safari/537.36 AliApp(DingTalk/7.0.0) com.alibaba.android.rimet/27766687 Channel/700159 language/zh-CN abi/64 UT4Aplus/0.2.25 colorScheme/light"){alert("浏览器版本不支持，请用别的浏览器打开")};
@@ -35,12 +20,13 @@
     <!-- 登录 -->
     <div id="denglu">
         <h1>登录</h1>
+        <div class="guanbi" onclick="guanbi(document.getElementById('denglu'))" style="position: absolute;top:3px;right:3px;"></div>
         <form name="contact" id="from" netlify>
-        <div><p>*昵称：<input type="text" id="username" maxlength="6" required/></p></div>
-        <div><p>*邮箱：<input type="text" id="mail" required/></p></div>
-        <div><p>*密码：<input type="password" id="password" maxlength="6" required/></p></div>
+        <div><p>*昵称：<input type="text" id="username" maxlength="6" /></p></div>
+        <div><p>*邮箱：<input type="text" id="mail"/></p></div>
+        <div><p>*密码：<input type="password" id="password" maxlength="6"/></p></div>
         <div id="tijiao" onclick="usernews ()">提交</div>
-        </from>
+        </form>
     </div>
     <div class="PC">
         <!-- 页面正常弹窗 -->
@@ -64,8 +50,11 @@
             <div style="float:right" class="tbl weikaifang">
                 <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blog</p>
             </div>
-        r    <div style="float:right" class="tbl" onclick="sign()">
+            <div style="float:right" class="tbl" onclick="sign()" id="yh">
                 <h3 style="line-height:0px;text-align:center;">登录</h3><p style="line-height:10px;text-align:center;">Sign in</p>
+            </div>
+            <div style="float:right" class="tbl weikaifang" onclick="sign()" id="yhm">
+                <h3 style="line-height:0px;text-align:center;">已登录</h3>
             </div>
         </div>
         <div style="height:68px;width:100%;margin:5px; "></div>
@@ -134,8 +123,11 @@
             <div style="float:right" class="tbl weikaifang">
                 <p style="line-height:9px;text-align:center;">博客<br/><br/>Blog</p>
             </div>
-            <div style="float:right" class="tbl" onclick="sign()">
-                <p style="line-height:9px;text-align:center;">登录<br/><br/>Sign in</p>
+            <div style="float:right" class="tbl" onclick="sign()" id="yh1">
+                <h3 style="line-height:0px;text-align:center;">登录</h3><p style="line-height:10px;text-align:center;">Sign in</p>
+            </div>
+            <div style="float:right" class="tbl weikaifang" onclick="sign()" id="yhm1">
+                <h3 style="line-height:0px;text-align:center;">已登录</h3>
             </div>
         </div>
         <div style="height:50px;width:100%;margin:5px; "></div>
