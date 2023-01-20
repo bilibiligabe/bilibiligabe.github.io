@@ -1,3 +1,15 @@
+//登录验证
+var cookie = document.cookie;
+if (cookie==""){
+    console.log("未登录");
+    var dlzt = 0;
+}else{
+    console.log("已登陆");
+    var dlzt = 1;
+}
+
+
+
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
@@ -71,24 +83,33 @@ function sign (){
 //From and Cookie
 function usernews (){
     //cookie
+    var username = "user="+document.getElementById("username").value+";";
+    var mail = "mail="+document.getElementById("mail").value+";";
+    var password = "password="+document.getElementById("password").value+";";
+    var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
+    document.cookie = username + expires +"path=/";
+    if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
+    document.cookie = mail+ expires +"path=/";
+    if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
+    document.cookie = password + expires +"path=/";
+    if(document.getElementById("password").value == ""){alert('输入密码！');return;}
     var cookie = document.cookie;
-    if(cookie !== ""){
-        alert("已登录/提交")
-        retrun;
-    } else{
-        var username = "user="+document.getElementById("username").value+";";
-        var mail = "mail="+document.getElementById("mail").value+";";
-        var password = "password="+document.getElementById("password").value+";";
-        var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-        document.cookie = username + expires +"path=/";
-        document.cookie = mail+ expires +"path=/";
-        document.cookie = password + expires +"path=/";
-        var cookie = document.cookie;
-        retrun;
-    }
-    
+
     //from
     document.getElementById("from").submit();
+
+    //close
+    document.getElementById("denglu").style.display = "none";
+
+    //sign in PC
+    var yh = document.getElementById("yh");
+    yh.style.display = "none";
+    var yhm = document.getElementById("yhm");
+    yhm.style.display = "block";
+
+    //sign in MP
+    var yh = document.getElementById("yh1");
+    yh.style.display = "none";
+    var yhm = document.getElementById("yhm1");
+    yhm.style.display = "block";
 }
-document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-//登录
