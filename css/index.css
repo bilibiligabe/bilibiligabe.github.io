@@ -23,8 +23,8 @@
     font-size:23px;
     margin:5px;
 }
-.sousuokuang:focus{
-    width:330px;
+#denglu input:focus{
+    width:200px;
 }
 #tijiao{
     margin:0 auto;
