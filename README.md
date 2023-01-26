@@ -1,2 +1,2 @@
 # bilibiligabe.github.io
-是Bilibili傻狗子呦的网站
+bilibiligabe.github.io是Bilibili傻狗子呦的网站
