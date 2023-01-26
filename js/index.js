@@ -1,15 +1,3 @@
-//登录验证
-var cookie = document.cookie;
-if (cookie==""){
-    console.log("未登录");
-    var dlzt = 0;
-}else{
-    console.log("已登陆");
-    var dlzt = 1;
-}
-
-
-
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
@@ -68,48 +56,4 @@ function caidan (){
     document.getElementById("caidan-guanbi").style.display="block";
     setTimeout(function a () {caidan.style.height = height===0 ? 420+'px' : 0+'px';},100);
     if (height == 420){setTimeout(function a () {caidan.style.display="none";}, 400);}
-}
-//登录
-function sign (){
-    document.getElementById("denglu").style.display = "block";
-    /*
-    var btn=document.createElement("button");
-    var t=document.createTextNode("CLICK ME");
-    btn.appendChild(t);
-    btn.id="a";
-    document.body.appendChild(btn);
-    */
-}
-//From and Cookie
-function usernews (){
-    //cookie
-    var username = "user="+document.getElementById("username").value+";";
-    var mail = "mail="+document.getElementById("mail").value+";";
-    var password = "password="+document.getElementById("password").value+";";
-    var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-    document.cookie = username + expires +"path=/";
-    if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
-    document.cookie = mail+ expires +"path=/";
-    if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
-    document.cookie = password + expires +"path=/";
-    if(document.getElementById("password").value == ""){alert('输入密码！');return;}
-    var cookie = document.cookie;
-
-    //from
-    document.getElementById("from").submit();
-
-    //close
-    document.getElementById("denglu").style.display = "none";
-
-    //sign in PC
-    var yh = document.getElementById("yh");
-    yh.style.display = "none";
-    var yhm = document.getElementById("yhm");
-    yhm.style.display = "block";
-
-    //sign in MP
-    var yh = document.getElementById("yh1");
-    yh.style.display = "none";
-    var yhm = document.getElementById("yhm1");
-    yhm.style.display = "block";
 }
