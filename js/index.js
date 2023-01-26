@@ -74,7 +74,7 @@ function usernews (){
     var mail = "mail="+document.getElementById("mail").value+";";
     var password = "password="+document.getElementById("password").value+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-    if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
+    if(document.getElementById("user").value == ""){alert('输入用户名！');return;}
     if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
     if(document.getElementById("password").value == ""){alert('输入密码！');return;}
     document.cookie = mail+ expires +"path=/";
