@@ -2,7 +2,7 @@
 var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
 if(cookies!==""){
     console.log(cookies);  //输出
-    window.onload = function(){document.getElementById("username").innerHTML=cookies[0];}
+    window.onload = function(){document.getElementById("username").innerHTML=cookies[2];}
 }
 
 //随机弹窗
@@ -89,5 +89,5 @@ function usernews (){
     var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
     console.log(cookies);  //输出
     //sign in
-    document.getElementById("username").innerHTML=cookies[0];
+    document.getElementById("username").innerHTML=cookies[2];
 }
