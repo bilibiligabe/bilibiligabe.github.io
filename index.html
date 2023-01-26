@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>屑网站</title>
     <link rel="icon" href="./图像资源/xie.png">
-    <meta name="description" content="铝装,炼铜">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
     <link rel="stylesheet" type="text/css" href="./css/index-MP.css" media="screen and (max-width:550px)"/>
-    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript">
         time();
@@ -17,24 +15,13 @@
     </script>
 </head>
 <body>
-    <!-- 登录 -->
-    <div id="denglu">
-        <h1>登录</h1>
-        <div class="guanbi" onclick="guanbi(document.getElementById('denglu'))" style="position: absolute;top:3px;right:3px;"></div>
-        <form name="contact" id="from" netlify>
-        <div><p>*昵称：<input type="text" id="username" name="username" maxlength="6" /></p></div>
-        <div><p>*邮箱：<input type="text" id="mail" name="mail"/></p></div>
-        <div><p>*密码：<input type="password" id="password" name="password" maxlength="6"/></p></div>
-        <div id="tijiao" onclick="usernews ()">提交</div>
-        </form>
-    </div>
-    <div class="PC">
         <!-- 页面正常弹窗 -->
         <div class="tanchuang" id="tanchuang">
             <p style="font-size:23px;color:#ededed;">·如果页面出现错位 影响浏览，可按住 Ctrl 键 滚动鼠标中键 调整缩放至正常页面<br/>·推荐全屏浏览哦</p>
             <h3 id="djs" style="position:absolute;bottom:10px;right:20px;z-index:2;"></h3>
         </div>
-        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p class="ziweizhi">顶部</p></div>
+        <div onclick="caidan()" class="ancd"><p class="cd">菜单</p></div>
+        <div onclick="fhdb()" class="andb" title="返回页面顶部"><p class="db">顶部</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
             <div style="float:left;" class="tbl b1d9f4" onmouseover="dncdzk()" onmouseout="dncdgb()">
@@ -44,20 +31,14 @@
                 <a href="./英语.html"><h3 style="line-height:0px;text-align:center;">英语</h3><p style="line-height:10px;text-align:center;">English</p></a>
             </div>
             <div style="float:left;">
-                <input class="sousuokuang">
-                <div style="float:right;border: 1px solid #5e5e5e;height:58px;border-radius:3px;" class="tbl" onclick="alert('搜个屁，没弄好')"><h3 style="line-height:0px;text-align:center;">搜索</h3><p style="line-height:10px;text-align:center;">Search</p></div>
+                <input class="sousuokuang"/>
+                <div class="tbl sousuo" onclick="alert('搜个屁，没弄好')"><h3 style="line-height:0px;text-align:center;">搜索</h3><p style="line-height:10px;text-align:center;">Search</p></div>
             </div>
             <div style="float:right" class="tbl weikaifang">
                 <h3 style="line-height:0px;text-align:center;">博客</h3><p style="line-height:10px;text-align:center;">Blog</p>
             </div>
-            <div style="float:right" class="tbl" onclick="sign()" id="yh">
-                <h3 style="line-height:0px;text-align:center;">登录</h3><p style="line-height:10px;text-align:center;">Sign in</p>
-            </div>
-            <div style="float:right;display:none;" class="tbl weikaifang" onclick="sign()" id="yhm">
-                <h3 style="line-height:0px;text-align:center;">已登录</h3>
-            </div>
         </div>
-        <div style="height:68px;width:100%;margin:5px; "></div>
+        <div class="tianchong"></div>
         <div id="dncd" onmouseover="dncdzk()" onmouseout="dncdgb()">
             <div class="dncdnr"><a href="./blog.html"><h3 style="line-height:40px;text-align:center;">更新日志</h3></a></div>
             <div class="dncdnr"><a href="./huigu.html"><h3 style="line-height:40px;text-align:center;">往期回顾</h3></a></div>
@@ -96,76 +77,11 @@
                     </div>
                 </div>
                 <div class="mokuai3">
-                    <p align="center">2023/01/01/00:00:00建站</p>
-                    <p id="time" align="center"></p>
-                    <p align="center"><a href="https://space.bilibili.com/628596718?spm_id_from=333.788.0.0" target="_blank" style="text-decoration:underline;">站长:傻狗子哟</a></p>
-                    <h1 align="center">Welcome to Bilibiliganbei.netlify.app！</h1>
+                    <p class="p-3">2023/01/01/00:00:00建站</p>
+                    <p id="time" class="p-3"></p>
+                    <p class="p-3"><a href="https://space.bilibili.com/628596718?spm_id_from=333.788.0.0" target="_blank" style="text-decoration:underline;">站长:傻狗子哟</a></p>
+                    <h1 class="textno">Welcome to Bilibiliganbei.netlify.app！</h1>
                 </div>
-            </div>
-        </div>
-    </div>
-                
-    <div class="MP">
-        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p style="text-align:center;line-height:25px;">顶部</p></div>
-        <div onclick="caidan()" class="caidan" title="查看更多"><p style="text-align:center;line-height:25px;">菜单</p></div>
-        <!-- 头部栏 -->
-        <div class="toubulan">
-            <div style="float:left;" class="tbl b1d9f4">
-                <a href="./index.html"><p style="line-height:9px;text-align:center;">首页<br/><br/>Home</p></a>
-            </div>
-            <div style="float:left;" class="tbl">
-                <a href="./英语.html"><p style="line-height:9px;text-align:center;">英语<br/><br/>English</p></a>
-            </div>
-            <div style="float:left;">
-                <input class="sousuokuang">
-                <div style="float:right;border: 1px solid #5e5e5e;height:53px;border-radius:3px;" class="tbl"  onclick="alert('搜个屁，没弄好')"><p style="line-height:8px;text-align:center;">搜索<br/><br/>search</p></div>
-            </div>
-            <div style="float:right" class="tbl weikaifang">
-                <p style="line-height:9px;text-align:center;">博客<br/><br/>Blog</p>
-            </div>
-            <div style="float:right" class="tbl" onclick="sign()" id="yh1">
-                <h3 style="line-height:0px;text-align:center;">登录</h3><p style="line-height:10px;text-align:center;">Sign in</p>
-            </div>
-            <div style="float:right;display:none" class="tbl weikaifang" onclick="sign()" id="yhm1">
-                <h3 style="line-height:0px;text-align:center;">已登录</h3>
-            </div>
-        </div>
-        <div style="height:50px;width:100%;margin:5px; "></div>
-        <div class="neirong">
-            <div class="boke">
-                <div class="boketi"><br/><br/><p style="text-align:center;font-size:20px;">博客</p></div>
-                <div class="bokenr"><p align="center">No blogs</p></div>
-            </div>
-            <div class="shipin">
-                <div class="shipinzhankuang">
-                    <a href="https://www.bilibili.com/video/BV1wK411B7n9/?spm_id_from=333.788.recommend_more_video.9" target="_blank" >
-                        <img src="./图像资源/1.webp" class="tuijian-img" alt="图片丢失"/>
-                        <div class="shipinxinxi"><p class="p-1">我COS了《三体》第一集就噶了的小姐姐</p><p class="p-2">作者:泽鸽啊</p></div>
-                    </a>
-                </div>
-                <div class="shipinzhankuang">
-                    <a href="https://www.bilibili.com/video/BV1pG4y1R7eG/?spm_id_from=333.999.0.0" target="_blank" >
-                        <img src="./图像资源/2.webp" class="tuijian-img" alt="图片丢失"/>
-                        <div class="shipinxinxi"><p class="p-1">生存战争：大师教你野外求生！</p><p class="p-2">作者:灰机咕咕</p></div>
-                    </a>
-                </div>
-                <div class="shipinzhankuang">
-                    <a href="https://www.bilibili.com/video/BV14K411Z7Jx?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                        <img src="./图像资源/3.webp" class="tuijian-img" alt="图片丢失"/>
-                        <div class="shipinxinxi"><p class="p-1">汪汪队干大事</p><p class="p-2">作者:龙馍馍</p></div>
-                    </a>
-                </div>
-                <div class="shipinzhankuang">
-                     <a href="https://www.bilibili.com/video/BV1184y1W79V/?spm_id_from=333.788.recommend_more_video.-1" target="_blank" >
-                         <img src="./图像资源/4.webp" class="tuijian-img" alt="图片丢失"/>
-                         <div class="shipinxinxi"><p class="p-1">超 级 压 缩 毛 巾</p><p class="p-2">作者:伊介书生</p></div>
-                     </a>
-                </div>
-            </div>
-            <div class="mokuai3">
-                <p class="p-3">2023/01/01/00:00:00建站</p>
-                <p class="p-3" id="time1"></p>
-                <p class="p-3"><a href="https://space.bilibili.com/628596718?spm_id_from=333.788.0.0" target="_blank" style="text-decoration:underline;" class="p-3">站长:傻狗子哟</a></p>
             </div>
         </div>
         <div class="dibulan" id="caidan">
@@ -173,6 +89,5 @@
             <div class="cdnr"><a href="./blog.html"><h3 style="line-height:8px;text-align:center;">更新日志</h3></a></div>
             <div class="cdnr"><a href="./huigu.html"><h3 style="line-height:8px;text-align:center;">往期回顾</h3></a></div>
         </div>
-    </div>           
 </body>
 </html>
