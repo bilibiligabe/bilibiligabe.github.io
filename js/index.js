@@ -70,7 +70,7 @@ function sign (){
 //From and Cookie
 function usernews (){
     //setCookie
-    var username = "user="+document.getElementById("username").value+";";
+    var username = "user="+document.getElementById("user").value+";";
     var mail = "mail="+document.getElementById("mail").value+";";
     var password = "password="+document.getElementById("password").value+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
