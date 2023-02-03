@@ -2,7 +2,11 @@
 var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
 if(cookies !== ""){
     console.log(cookies);  //输出
-    window.onload = function(){document.getElementById("username").innerHTML=cookies[0];}
+    var start = cookies.indexOf("=");
+    var username = cookies[0].slice(start);
+    setTimeout(function a () {
+        document.getElementById("username").innerHTML=username;
+    }, 2000);
 }
 
 //随机弹窗
