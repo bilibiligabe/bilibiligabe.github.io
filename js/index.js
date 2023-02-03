@@ -3,7 +3,7 @@ var cookies=decodeURI(document.cookie.split("; "));  //把cookie自带的"; "存
 if(cookies !== ""){
     console.log(cookies);  //输出
     var start = cookies.indexOf("=");
-    var username = cookies[0].slice(start);
+    var username = cookies.slice(start);
     setTimeout(function a () {
         document.getElementById("username").innerHTML=username;
     }, 2000);
