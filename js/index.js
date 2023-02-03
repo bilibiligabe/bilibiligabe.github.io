@@ -1,8 +1,8 @@
 //创建数组
 var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
-if(cookies!==""){
+if(cookies !== ""){
     console.log(cookies);  //输出
-    window.onload = function(){document.getElementById("username").innerHTML=cookies[2];}
+    window.onload = function(){document.getElementById("username").innerHTML=cookies[0];}
 }
 
 //随机弹窗
@@ -37,10 +37,10 @@ function time() {
     var nowtime = new Date;
     var time = nowtime.getTime();
     var time1 = time - 1672502400000; //TIME：2023/1/1/00:00:00
-    var second = parseInt(time1 / 1000);
+    var second = time1 / 1000;
     var minute = second / 60;
     var hour = minute / 60;
-    var day = parseInt(hour / 24);
+    var day = parseInt(hour / 24) + 1;
     window.onload = function(){
         document.getElementById("time").innerHTML="网站已运行："+day+"天";
     }
@@ -70,11 +70,11 @@ function sign (){
 //From and Cookie
 function usernews (){
     //setCookie
-    var username = "user="+document.getElementById("user").value+";";
-    var mail = "mail="+document.getElementById("mail").value+";";
-    var password = "password="+document.getElementById("password").value+";";
+    var username = "user="+document.getElementById("username").value+";";
+    var mail = "mail=;";
+    var password =;";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-    if(document.getElementById("user").value == ""){alert('输入用户名！');return;}
+    if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
     if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
     if(document.getElementById("password").value == ""){alert('输入密码！');return;}
     document.cookie = mail+ expires +"path=/";
@@ -89,5 +89,5 @@ function usernews (){
     var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
     console.log(cookies);  //输出
     //sign in
-    document.getElementById("username").innerHTML=cookies[2];
+    document.getElementById("username").innerHTML=cookies[0];
 }
