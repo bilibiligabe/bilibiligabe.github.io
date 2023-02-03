@@ -1,5 +1,5 @@
 //创建数组
-var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
+var cookies=decodeURI(document.cookie.split("; "));  //把cookie自带的"; "存为数组并改为","
 if(cookies !== ""){
     console.log(cookies);  //输出
     var start = cookies.indexOf("=");
@@ -74,7 +74,8 @@ function sign (){
 //From and Cookie
 function usernews (){
     //setCookie
-    var username = "user="+document.getElementById("username").value+";";
+    var usernameValue = encodeURI(document.getElementById("username").value);
+    var username = "user="+usernameValue+";";
     var mail = "mail=;";
     var password =";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
