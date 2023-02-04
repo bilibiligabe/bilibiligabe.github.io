@@ -63,7 +63,7 @@ function sign (){
 //From and Cookie
 function usernews (){
     //setCookie
-    var username = "user="+encodeURI(document.getElementById("username").value);+";";
+    var username = "user="+encodeURI(document.getElementById("user").value)+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
     if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
     if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
