@@ -1,3 +1,10 @@
+//添加事件
+var cookies = document.cookie;
+if(cookies === ""){
+    setTimeout(function () {document.getElementById("userCenter").addEventListener("click", sign);}, 1000);
+}else{
+    setTimeout(function () {document.getElementById("userCenter").removeEventListener("click", sign);}, 1000);
+}
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
@@ -65,7 +72,7 @@ function usernews (){
     //setCookie
     var username = "user="+encodeURI(document.getElementById("user").value)+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-    if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
+    if(document.getElementById("user").value == ""){alert('输入用户名！');return;}
     if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
     if(document.getElementById("password").value == ""){alert('输入密码！');return;}
     document.cookie = username + expires +"path=/";
