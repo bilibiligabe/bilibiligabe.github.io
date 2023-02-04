@@ -1,14 +1,3 @@
-//创建数组
-var cookies=decodeURI(document.cookie.split("; "));  //把cookie自带的"; "存为数组并改为","
-if(cookies !== ""){
-    console.log(cookies);  //输出
-    var start = cookies.indexOf("=");
-    var username = cookies.slice(start);
-    setTimeout(function a () {
-        document.getElementById("username").innerHTML=username;
-    }, 2000);
-}
-
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
@@ -74,25 +63,14 @@ function sign (){
 //From and Cookie
 function usernews (){
     //setCookie
-    var usernameValue = encodeURI(document.getElementById("username").value);
-    var username = "user="+usernameValue+";";
-    var mail = "mail=;";
-    var password =";";
+    var username = "user="+encodeURI(document.getElementById("username").value);+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
     if(document.getElementById("username").value == ""){alert('输入用户名！');return;}
     if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
     if(document.getElementById("password").value == ""){alert('输入密码！');return;}
-    document.cookie = mail+ expires +"path=/";
     document.cookie = username + expires +"path=/";
-    document.cookie = password + expires +"path=/";
     //from
     document.getElementById("form").submit();
     //close
     document.getElementById("denglu").style.display = "none";
-    
-    //getCookie
-    var cookies=document.cookie.split("; ");  //把cookie自带的"; "存为数组并改为","
-    console.log(cookies);  //输出
-    //sign in
-    document.getElementById("username").innerHTML=cookies[0];
 }
