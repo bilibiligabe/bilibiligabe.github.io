@@ -69,13 +69,36 @@ function sign (){
 }
 //From and Cookie
 function usernews (){
+    var user = "user="+encodeURI(document.getElementById("user").value)+";";
+    var mail = document.getElementById("mail").value;
+    var password = document.getElementById("password").value;
+    //verify
+    if(user == ""){
+        alert('输入用户名！');
+        return;
+    } else if(mail == ""){
+        alert('输入邮箱！');
+        return;
+    } else if(password == ""){
+        alert('输入密码！');
+        return;
+    } else if(mail.indexOf("@") == -1){
+        alert('输入正确的邮箱！');
+        return;
+    } else if(mail.indexOf(".") == -1){
+        alert('输入正确的邮箱！');
+        return;
+    } else if(/[\u4E00-\u9FA5\uFE30-\uFFA0]/.test(mail)){
+        alert('邮箱不能带有汉字和特殊字符！');
+        return;
+    } else if(/[\u4E00-\u9FA5\uFE30-\uFFA0]/.test(password)){
+        alert('密码不能带有汉字和特殊字符！');
+        return;
+    }
+
     //setCookie
-    var username = "user="+encodeURI(document.getElementById("user").value)+";";
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
-    if(document.getElementById("user").value == ""){alert('输入用户名！');return;}
-    if(document.getElementById("mail").value == ""){alert('输入邮箱！');return;}
-    if(document.getElementById("password").value == ""){alert('输入密码！');return;}
-    document.cookie = username + expires +"path=/";
+    document.cookie = user + expires +"path=/";
     //from
     document.getElementById("form").submit();
     //close
