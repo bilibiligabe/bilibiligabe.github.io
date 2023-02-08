@@ -2,59 +2,55 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>屑网站-日志</title>
+    <title>屑网站</title>
     <link rel="icon" href="./图像资源/xie.png">
-    <meta name="description" content="wo-qu-chu-yin-wei-lai.netlify.app 的推荐栏回顾 页面">
-    <meta name="keywords" content="wo-qu-chu-yin-wei-lai.netlify.app,blog">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
     <link rel="stylesheet" type="text/css" href="./css/index-MP.css" media="screen and (max-width:550px)"/>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript">
-        var userAgent = window.navigator.userAgent;
-        if(userAgent == "Mozilla/5.0 (Linux; U; Android 10; zh-CN; Redmi K30 5G Build/QKQ1.191222.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/69.0.3497.100 UWS/3.22.1.233 Mobile Safari/537.36 AliApp(DingTalk/7.0.0) com.alibaba.android.rimet/27766687 Channel/700159 language/zh-CN abi/64 UT4Aplus/0.2.25 colorScheme/light"){alert("浏览器版本不支持，请用别的浏览器打开")};
+        time();
     </script>
-    <style type="text/css">
-        #shipinzhankuang{
-            width:47.5%;
-            float:left;
-            margin:5px 5px 5px 5px;
-            border: 2px solid #5e5e5e;
-        }
-        #shipinzhankuang1{
-            width:46%;
-            float:left;
-            height:150px;
-            margin:4px 4px 4px 4px;
-            border: 2px solid #5e5e5e;
-        }
-        #p{
-            text-align:center;
-        }
-        #p:hover{
-            color:red;
-        } 
-    </style>
 </head>
 <body>
-    <div class="PC">
+        <div id="denglu">
+            <br/><br/><br/>
+            <form id="form" name="contact" method="POST" data-netlify="true">
+                <div><h1>名称*<input type="text" name="user" id="user" maxlength="6"/></h1></div>
+                <div><h1>邮箱*<input type="text" name="mail" id="mail"/></h1></div>
+                <div><h1>密码*<input type="password" name="password" id="password" maxlength="6"/></h1></div>
+                <div id="tijiao" onclick="usernews()"><p>提交</p></div>
+            </form>
+        </div>
         <!-- 页面正常弹窗 -->
         <div class="tanchuang" id="tanchuang">
             <p style="font-size:23px;color:#ededed;">·如果页面出现错位 影响浏览，可按住 Ctrl 键 滚动鼠标中键 调整缩放至正常页面<br/>·推荐全屏浏览哦</p>
             <h3 id="djs" style="position:absolute;bottom:10px;right:20px;z-index:2;"></h3>
         </div>
-        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p class="ziweizhi">顶部</p></div>
+        <div onclick="caidan()" class="ancd"><p class="cd">菜单</p></div>
+        <div onclick="fhdb()" class="andb" title="返回页面顶部"><p class="db">顶部</p></div>
         <!-- 头部栏 -->
         <div class="toubulan">
-            <div style="float:left;" class="tbl" onmouseover="dncdzk()" onmouseout="dncdgb()">
+            <div style="float:left;" class="tbl b1d9f4" onmouseover="dncdzk()" onmouseout="dncdgb()">
                 <a href="./index.html"><h3 style="line-height:0px;text-align:center;">首页</h3><p style="line-height:10px;text-align:center;">Home</p></a>
             </div>
-            <div style="float:left;" class="tbl b1d9f4">
-                <a href="./huigu.html"><h3 style="line-height:0px;text-align:center;">回顾</h3><p style="line-height:10px;text-align:center;">Review</p></a>
+            <div style="float:left;" class="tbl">
+                <a href="./英语.html"><h3 style="line-height:0px;text-align:center;">英语</h3><p style="line-height:10px;text-align:center;">English</p></a>
+            </div>
+            <div style="float:left;">
+                <input class="sousuokuang"/>
+                <div class="tbl sousuo" onclick="alert('搜个屁，没弄好')"><h3 style="line-height:0px;text-align:center;">搜索</h3><p style="line-height:10px;text-align:center;">Search</p></div>
+            </div>
+            <div style="float:right" class="tbl weikaifang" id="userCenter">
+                <h3 style="line-height:10px;text-align:center;" id="username">登录</h3>
             </div>
         </div>
-        <div style="height:68px;width:100%;margin:5px; "></div>
-        <div id="dncd"></div>
+        <div class="tianchong"></div>
+        <div id="dncd" onmouseover="dncdzk()" onmouseout="dncdgb()">
+            <div class="dncdnr"><a href="./blog.html"><h3 style="line-height:40px;text-align:center;">更新日志</h3></a></div>
+            <div class="dncdnr"><a href="./huigu.html"><h3 style="line-height:40px;text-align:center;">往期回顾</h3></a></div>
+        </div>
         <div class="juzhong">
                 <div id="shipinzhankuang">
                     <a href="https://www.bilibili.com/video/BV1Tg411W7LS?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
@@ -76,45 +72,13 @@
                          <p id="p">边吃头孢边喝酒，你的身体会发生哪些变化？</p><p id="p">作者:李白尼的猜想</p>
                      </a>
                 </div>
-        </div>
-    </div>
-                
-    <div class="MP">
-        <div onclick="fhdb()" class="fanhui" title="返回页面顶部"><p style="text-align:center;line-height:25px;">顶部</p></div>
-        <div onclick="caidan()" class="caidan" title="查看更多"><p style="text-align:center;line-height:25px;">菜单</p></div>
-        <!-- 头部栏 -->
-        <div class="toubulan">
-            <div style="float:left;" class="tbl">
-                <a href="./index.html"><p style="line-height:9px;text-align:center;">首页<br/><br/>Home</p></a>
-            </div>
-            <div style="float:left;" class="tbl b1d9f4">
-                <a href="./huigu.html"><h3 style="line-height:0px;text-align:center;">回顾</h3><p style="line-height:10px;text-align:center;">Review</p></a>
             </div>
         </div>
-        <div style="height:50px;width:100%;margin:5px; "></div>
-        <div class="neirong">
-                <div id="shipinzhankuang1">
-                    <a href="https://www.bilibili.com/video/BV1Tg411W7LS?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                        <p id="p">《倒霉动物在哪里》</p><p id="p">作者:龙馍馍</p>
-                    </a>
-                </div>
-                <div id="shipinzhankuang1">
-                    <a href="https://www.bilibili.com/video/BV1Zv4y1m7k8?spm_id_from=333.1007.tianma.3-3-7.click" target="_blank" >
-                        <p id="p">蓝色妖姬毁灭鬼畜区</p><p id="p">作者:青铃荼阳</p>
-                    </a>
-                </div>
-                <div id="shipinzhankuang1">
-                    <a href="https://www.bilibili.com/video/BV13Y411f7zr?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                        <p id="p">《动物迷惑行为大赏130》</p><p id="p">作者:龙馍馍</p>
-                    </a>
-                </div>
-                <div id="shipinzhankuang1">
-                     <a href="https://www.bilibili.com/video/BV1Hd4y1k73B?spm_id_from=333.1007.tianma.1-1-1.click" target="_blank" >
-                         <p id="p">边吃头孢边喝酒，你的身体会发生哪些变化？</p><p id="p">作者:李白尼的猜想</p>
-                     </a>
-                </div>
+        <div class="dibulan" id="caidan">
+            <div class="guanbi" onclick="caidan()" id="caidan-guanbi" style="position: absolute;top:3px;right:3px;"></div>
+            <div class="cdnr"><a href="./blog.html"><h3 style="line-height:8px;text-align:center;">更新日志</h3></a></div>
+            <div class="cdnr"><a href="./huigu.html"><h3 style="line-height:8px;text-align:center;">往期回顾</h3></a></div>
         </div>
-        <div class="dibulan" id="caidan"><div class="guanbi" onclick="caidan()" id="caidan-guanbi"></div></div>
-    </div>           
+        <script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>
