@@ -5,6 +5,10 @@ if(cookies === ""){
 }else{
     setTimeout(function () {document.getElementById("userCenter").removeEventListener("click", sign);}, 1000);
 }
+//验证浏览器
+var userAgent = window.navigator.userAgent.match("DingTalk");
+if(userAgent === "DingTalk"){alert("不要用钉钉浏览器或QQ浏览器打开")};
+
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
 if(tanchuang < 5){
@@ -23,6 +27,7 @@ if(tanchuang < 5){
         setTimeout(function b () {tanchuang.style.display = "none";}, 7900);
     }, 1000);
 }
+
 //返回顶部
 function fhdb() {
     document.body.scrollTop = 0;
