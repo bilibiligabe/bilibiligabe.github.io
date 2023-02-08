@@ -7,7 +7,7 @@ if(cookies === ""){
 }
 //验证浏览器
 var userAgent = window.navigator.userAgent.match("DingTalk");
-if(userAgent === "DingTalk"){alert("不要用钉钉浏览器或QQ浏览器打开")};
+if(userAgent[0] === "DingTalk"){alert("不要用钉钉浏览器或QQ浏览器打开")};
 
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
