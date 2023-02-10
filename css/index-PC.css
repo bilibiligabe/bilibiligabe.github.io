@@ -157,11 +157,18 @@ a{
 }
 .boketi{
      width:99.8%;
+     margin:0px 0px 10px 0px;
      height:35px;
      background:#fff;
      box-shadow: 1px 4px 4px #a5abb1;
 }
 .boke{
+    width:95%;
+    height:75px;
+    border: 2px solid #5e5e5e;
+    text-align:center;
+    margin:0 auto;
+    padding: 20px 0px 0px 0px;
 }
 .shipin{
     width:100%;

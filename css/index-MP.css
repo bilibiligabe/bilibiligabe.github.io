@@ -120,17 +120,24 @@ html,body{
 }
 .zuo{
     width:100%;
-    height:200px;
+    height:300px;
     margin:0px 0px 20px 0px;
     box-shadow: 0px 5px 5px #a5abb1;
 }
 .boketi{
-    width:30px;
-    height:196px;
+    width:6%;
+    height:296px;
     border: 2px solid #5e5e5e;
     float:left;
 }
 .boke{
+    width:89%;
+    margin:5px 0px 5px 5px;
+    height:65px;
+    border: 2px solid #5e5e5e;
+    float:left;
+    text-align:center;
+    padding: 15px 0px 0px 0px;
 }
 .dibulan{
     width:96%;
