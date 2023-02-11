@@ -8,7 +8,7 @@ if(cookies === ""){
 //验证浏览器
 var userAgent = window.navigator.userAgent.match("DingTalk");
 if(userAgent !== null){
-    alert("不要用钉钉浏览器或QQ浏览器打开");
+    setInterval(function (){alert("不要用钉钉浏览器或QQ浏览器打开");},2000);
 }else {
     console.log("浏览器支持");
 }
