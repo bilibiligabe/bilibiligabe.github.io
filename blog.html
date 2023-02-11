@@ -8,16 +8,19 @@
     <link rel="stylesheet" type="text/css" href="./css/index-PC.css" media="screen and (max-width:2000px) and (min-width:550px)"/>
     <link rel="stylesheet" type="text/css" href="./css/index-MP.css" media="screen and (max-width:550px)"/>
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
-    <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
         <div id="denglu">
+            <div class="guanbi" onclick="signUp()" style="display:block;position: absolute;top:5px;right:5px;"></div>
             <br/><br/><br/>
             <form id="form" name="contact" method="POST" data-netlify="true">
                 <div><h1>名称*<input type="text" name="user" id="user" maxlength="6"/></h1></div>
                 <div><h1>邮箱*<input type="text" name="mail" id="mail"/></h1></div>
                 <div><h1>密码*<input type="password" name="password" id="password" maxlength="6"/></h1></div>
                 <div id="tijiao" onclick="usernews()"><p>提交</p></div>
+                <br/><br/>
+                <h1><input type="radio" style="width:25px;height:25px;" name="a" id="radio1">没有账号，注册</h1>
+                <h1><input type="radio" style="width:25px;height:25px;" name="a" id="radio2">已有账号，登录</h1>
             </form>
         </div>
         <!-- 页面正常弹窗 -->
@@ -78,5 +81,6 @@
             <div class="cdnr"><a href="./huigu.html"><h3 style="line-height:8px;text-align:center;">往期回顾</h3></a></div>
         </div>
         <script type="text/javascript" src="./js/login.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>
