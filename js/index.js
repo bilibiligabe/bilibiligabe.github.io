@@ -1,9 +1,9 @@
 //添加事件
 var cookies = document.cookie;
 if(cookies === ""){
-    setTimeout(function () {document.getElementById("userCenter").addEventListener("click", sign);}, 900);
+    document.getElementById("userCenter").addEventListener("click", signUp);
 }else{
-    setTimeout(function () {document.getElementById("userCenter").removeEventListener("click", sign);}, 1000);
+    document.getElementById("userCenter").removeEventListener("click", sign);
 }
 //验证浏览器
 var userAgent = window.navigator.userAgent.match("DingTalk");
@@ -11,6 +11,17 @@ if(userAgent !== null){
     alert("不要用钉钉浏览器或QQ浏览器打开");
 }else {
     console.log("浏览器支持");
+}
+//计算时间
+if(location.hostname === "shag.netlify.app" || location.hostname === "bilibiligabe.github.io"){
+    var nowtime = new Date;
+    var time = nowtime.getTime();
+    var time1 = time - 1672502400000; //TIME：2023/1/1/00:00:00
+    var second = time1 / 1000;
+    var minute = second / 60;
+    var hour = minute / 60;
+    var day = parseInt(hour / 24);
+    document.getElementById("time").innerHTML="网站已运行："+day+"天";
 }
 //随机弹窗
 var tanchuang = Math.floor((Math.random() * 10) + 1);
@@ -40,19 +51,6 @@ function fhdb() {
 function guanbi(guanbi) {
     guanbi.style.display = "none";
 }
-//计算时间
-function time() {
-    var nowtime = new Date;
-    var time = nowtime.getTime();
-    var time1 = time - 1672502400000; //TIME：2023/1/1/00:00:00
-    var second = time1 / 1000;
-    var minute = second / 60;
-    var hour = minute / 60;
-    var day = parseInt(hour / 24) + 1;
-    window.onload = function(){
-        document.getElementById("time").innerHTML="网站已运行："+day+"天";
-    }
-}
 //菜单1
 function dncdzk(){
     var dncd = document.getElementById("dncd");
@@ -72,8 +70,9 @@ function caidan (){
     if (height == 420){setTimeout(function a () {caidan.style.display="none";}, 400);}
 }
 //Sign in
-function sign (){
-    document.getElementById("denglu").style.display = "block";
+function signUp (){
+    var denglu = document.getElementById("denglu");
+    denglu.style.display = denglu.style.display === "none" ? "block" : "none";
 }
 //From and Cookie
 function usernews (){
@@ -107,8 +106,18 @@ function usernews (){
     //setCookie
     var expires ="expires=Sun Feb 18 2024 09:00:00 GMT;";
     document.cookie = user + expires +"path=/";
+
     //from
-    document.getElementById("form").submit();
+    var radio1 = document.getElementById("radio1").checked;
+    var radio2 = document.getElementById("radio2").checked;
+    if(radio1== false && radio2 == false){
+        alert("必须选择登录或注册");
+        return;
+    }
+    if(radio1 == true){
+        document.getElementById("form").submit();
+    }
+
     //close
     document.getElementById("denglu").style.display = "none";
 }
