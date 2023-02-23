@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>坦克大战</title>
+		<link rel="stylesheet" type="text/css" href="./css/tank.css"/>
+	</head>
+	<body>
+        <div class="player">
+            <canvas id="game" width="1100" height="750" onclick="openFire()"></canvas>
+        </div>
+		<img id="blueTank" src="img/blueTank.png" width="60" height="60">
+        <img id="redTank" src="img/redTank.png" width="60" height="60">
+        <script type="text/javascript" src="./js/blueTank.js"></script>
+	</body>
+</html>
